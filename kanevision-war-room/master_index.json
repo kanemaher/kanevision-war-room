@@ -1,0 +1,18 @@
+{
+    "goals": [
+        {
+            "id": "G1",
+            "title": "Scale Bone Idol branding",
+            "description": "Expand Bone Idol's global presence with neon-blue visuals and raw rebellion vibe."
+        }
+    ],
+    "tasks": [
+        {
+            "id": "T1",
+            "title": "Process folder 6 files",
+            "description": "Run Auto on QuickDrop folder 6 for file analysis."
+        }
+    ],
+    "systems": [],
+    "ideas": []
+}

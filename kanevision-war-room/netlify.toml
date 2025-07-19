@@ -1,0 +1,8 @@
+[build]
+  base = ""
+  publish = ""
+  command = ""
+[[redirects]]
+  from = "/*"
+  to = "/war_room_dashboard.html"
+  status = 200

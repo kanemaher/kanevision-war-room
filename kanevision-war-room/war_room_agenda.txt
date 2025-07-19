@@ -1,0 +1,6 @@
+Kanevision War Room Agenda
+- Review Bone Idol branding goals
+- Monitor Auto's file processing (QuickDrop folders 1-6)
+- Plan TAO's 6-week global campaign
+- Test Tone.js beats for vibe
+- Next steps: Cloud integrations (Google Drive/Dropbox)

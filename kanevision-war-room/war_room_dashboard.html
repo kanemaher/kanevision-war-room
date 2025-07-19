@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanevision War Room</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #1a1a1a; color: #00ffcc; }
+        #console { width: 100%; padding: 10px; font-size: 16px; }
+        #dashboard { margin-top: 20px; }
+        button { background: #00ffcc; color: #1a1a1a; padding: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Kanevision War Room</h1>
+    <input id="console" type="text" placeholder="Enter command (e.g., Cindy, show goals)">
+    <button onclick="playBeat()">Play Beat</button>
+    <div id="dashboard">Loading Goals & Tasks...</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
+    <script src="auto_file_processing.js"></script>
+    <script>
+        fetch('master_index.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dashboard').innerHTML = `
+                    <h2>Goals & Tasks</h2>
+                    <p><strong>Goal:</strong> ${data.goals[0].title}</p>
+                    <p><strong>Task:</strong> ${data.tasks[0].title}</p>
+                `;
+            });
+        document.getElementById('console').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && this.value === 'Cindy, show goals and tasks') {
+                document.getElementById('dashboard').innerHTML += '<p>Cindy: Goals and tasks loaded!</p>';
+            }
+        });
+        function playBeat() {
+            const synth = new Tone.Synth().toDestination();
+            synth.triggerAttackRelease('C4', '8n');
+        }
+    </script>
+</body>
+</html>
