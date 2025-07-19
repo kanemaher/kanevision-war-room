@@ -4,5 +4,5 @@
   command = ""
 [[redirects]]
   from = "/*"
-  to = "/war_room_dashboard.html"
+  to = "/index.html"
   status = 200
